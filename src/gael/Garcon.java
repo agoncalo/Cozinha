@@ -1,7 +1,5 @@
 package gael;
 
-/**
- * Created by AntonioFilho on 24/06/17.
- */
 public class Garcon {
+    public void notificarPedidoPronto() {};
 }
