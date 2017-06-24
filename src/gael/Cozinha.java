@@ -9,7 +9,7 @@ public class Cozinha {
         return ourInstance;
     }
 
-    private ArrayList<Pedido> listaDePedidos = new ArrayList<Pedido>();
+    private ArrayList<Pedido> listaDePedidos = new ArrayList<>();
     private ArrayList<Garcon> listaDeGarcon = new ArrayList<>();
 
     private Cozinha() {
@@ -19,10 +19,10 @@ public class Cozinha {
         listaDePedidos.add(pedido);
     }
 
-    public void pedidoPronto(Pedido pedido) {
+    public void finalizarPedido(Pedido pedido) {
         listaDePedidos.remove(pedido);
         for (Garcon g : listaDeGarcon) {
-            g.notificarPedidoPronto();
+            g.notificarPedidoPronto(pedido);
         }
     }
 }
